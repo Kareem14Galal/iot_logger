@@ -1,0 +1,126 @@
+##downloade the least updates 
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ sudo apt update
+[sudo] password for elsaidy-electric: 
+Hit:1 http://eg.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://eg.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:4 http://eg.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:5 http://eg.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2,881 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [54.5 kB]
+Get:7 http://eg.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [870 kB]
+Get:8 http://eg.archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [112 kB]
+Get:9 http://eg.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 DEP-11 Metadata [212 B]
+Get:10 http://eg.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1,227 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 DEP-11 Metadata [208 B]
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [126 kB]
+Get:13 http://eg.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [782 kB]
+Get:14 http://eg.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [359 kB]
+Get:15 http://eg.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:16 http://eg.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [7,060 B]
+Get:17 http://eg.archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 DEP-11 Metadata [212 B]
+Get:18 http://eg.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [25.8 kB]
+Get:19 http://eg.archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 DEP-11 Metadata [212 B]
+Get:20 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 DEP-11 Metadata [208 B]
+Fetched 6,830 kB in 2s (3,203 kB/s)                                            
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+282 packages can be upgraded. Run 'apt list --upgradable' to see them.
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ sudo apt-get update
+Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:2 http://eg.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://eg.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://eg.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists... Done
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ man apt
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ man apt update
+
+##write date and username and kernal version (search about command in man first)
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ date 
+30 أغس, 2025 EEST 10:04:17 م
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ whoami
+elsaidy-electric
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ man uname
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ uname -v
+#78~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Aug 13 14:32:06 UTC 2
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ uname -s
+Linux
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ man uname
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ uname -r
+6.8.0-78-generic
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ man uname
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  Templates
+Documents  gitdemo    Pictures  snap    Videos
+
+##third task 
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ mkdir home
+elsaidy-electric@elsaidyelectric-virtualbox:cd home
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ mkdir elsaidy-electric
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ cd elsaidy-electric
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ mkdir iot_logger
+elsaidy-electric@elsayelectric-VirtualBox:~/home/elsaidy-electric$ ls
+iot_logger
+
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ touch logs.txt script.txt data.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls
+data.txt  logs.txt  script.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ tree
+.
+├── data.txt
+├── logs.txt
+└── script.txt
+
+0 directories, 3 files
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ cd 
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd home
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ tree
+.
+└── elsaidy-electric
+    └── iot_logger
+        ├── data.txt
+        ├── logs.txt
+        └── script.txt
+
+2 directories, 3 files
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$
+
+###################################################################
+Open-Ended Questions: 
+
+##Q1:
+Hardware is the physical part of the matter. It includes the processor, 
+RAM, and anything inside my device that responds to it. 
+The second part is the kernel. This is the brain of the system. 
+It controls the hardware components and tells who to operate and what to do, and starts and stops the 
+process. It uses assembly language to communicate. There is another part called system calls, which 
+translates the words in the shell into an assembly that the kernel can understand. 
+The shell is the part where we, as users, write our commands, such as bash and other examples. 
+The user space is where our commands start to be executed (these system calls work like a gateway. 
+Their location is after the shell and before the kernel).
+
+
+##Q2:
+/  is the the  root of the operating system. It is the root of any file or directory that must be the last 
+thing in its path, and any directory that has a father to this because it is the father of all.
+
+bin, which contains the basic commands that we use to interact with the system, such as cd
+
+sbin contains the commands that control the device itself, such as shutdown
+
+usr, which contains the libraries that we use and operate like, for example, git
+
+etc. This contains information about the operating system, such as the user name and device name
+
+var is where variables are stored.
+
+##Q3:
+1-Simplify the interaction between the user space and the kernel space by providing a unified interface
+2-A program is a file in which I write the operations that are supposed to be executed, 
+but it is not running, meaning it is not doing any process on the CPU now. 
+It is just some codes written that are not doing anything now. 
+But the process is the process that consumes the CPU 
+when I start running the program and the code that what i  write in the program apply  like when 
+I write 1+1 in a program. As long as I do not run it is a 
+program that does not run any process. 
+As soon as I run the CPU, I run a process and it gives me 2

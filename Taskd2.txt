@@ -1,0 +1,768 @@
+elsaidy-electric@elsaidyelectric-VirtualBox:/usr/share/fonts$ cd
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ ls
+Desktop  Documents  Downloads  gitdemo  home  Music  Pictures  Public  snap  tasks  Templates  Videos
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd gitdemo/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/gitdemo$ ls
+file11.text  test.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/gitdemo$ cd
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd home
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ ls
+elsaidy-electric
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ cd elsaidy-electric/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ ls
+iot_logger
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ cd iot_logger/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls
+data.txt  logs.txt  script.txt  taskd1.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ rm data.txt logs.txt script.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls
+taskd1.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ mkdir data logs scripts 
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls
+data  logs  scripts  taskd1.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ touch logs/temperature.log  scripts/sensor_script.py
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ ls
+Desktop  Documents  Downloads  gitdemo  home  Music  Pictures  Public  snap  tasks  Templates  Videos
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ ls -a
+.              .config     .gnupg    .oh-my-zsh            .ssh                       .viminfo
+..             Desktop     home      Pictures              .sudo_as_admin_successful  .zcompdump
+.bash_history  Documents   .lesshst  .profile              tasks                      .zcompdump-elsaidyelectric-VirtualBox-5.8.1
+.bash_logout   Downloads   .local    Public                Templates                  .zcompdump-elsaidyelectric-VirtualBox-5.8.1.zwc
+.bashrc        .gitconfig  .mozilla  .shell.pre-oh-my-zsh  .thunderbird               .zsh_history
+.cache         gitdemo     Music     snap                  Videos                     .zshrc
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd home
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ cd elsaidy-electric/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ cd iot_logger/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ cp /etc/services data/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ grep ssh /services
+grep: /services: No such file or directory
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ grep ssh services 
+ssh		22/tcp				# SSH Remote Login Protocol
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ grep "^t" services 
+tcpmux		1/tcp				# TCP port service multiplexer
+telnet		23/tcp
+time		37/tcp		timserver
+time		37/udp		timserver
+tacacs		49/tcp				# Login Host Protocol (TACACS)
+tacacs		49/udp
+tftp		69/udp
+talk		517/udp
+tinc		655/tcp				# tinc control port
+tinc		655/udp
+telnets		992/tcp				# Telnet over SSL
+tproxy		8081/tcp			# Transparent Proxy
+tfido		60177/tcp			# fidonet EMSI over telnet
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ grep -n  "^t" services 
+9:tcpmux		1/tcp				# TCP port service multiplexer
+25:telnet		23/tcp
+27:time		37/tcp		timserver
+28:time		37/udp		timserver
+30:tacacs		49/tcp				# Login Host Protocol (TACACS)
+31:tacacs		49/udp
+36:tftp		69/udp
+110:talk		517/udp
+125:tinc		655/tcp				# tinc control port
+126:tinc		655/udp
+135:telnets		992/tcp				# Telnet over SSL
+339:tproxy		8081/tcp			# Transparent Proxy
+358:tfido		60177/tcp			# fidonet EMSI over telnet
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ grep -l  "^t" services 
+services
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ grep "^[0-9]" services 
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ grep [0-9] services 
+tcpmux		1/tcp				# TCP port service multiplexer
+echo		7/tcp
+echo		7/udp
+discard		9/tcp		sink null
+discard		9/udp		sink null
+systat		11/tcp		users
+daytime		13/tcp
+daytime		13/udp
+netstat		15/tcp
+qotd		17/tcp		quote
+chargen		19/tcp		ttytst source
+chargen		19/udp		ttytst source
+ftp-data	20/tcp
+ftp		21/tcp
+fsp		21/udp		fspd
+ssh		22/tcp				# SSH Remote Login Protocol
+telnet		23/tcp
+smtp		25/tcp		mail
+time		37/tcp		timserver
+time		37/udp		timserver
+whois		43/tcp		nicname
+tacacs		49/tcp				# Login Host Protocol (TACACS)
+tacacs		49/udp
+domain		53/tcp				# Domain Name Server
+domain		53/udp
+bootps		67/udp
+bootpc		68/udp
+tftp		69/udp
+gopher		70/tcp				# Internet Gopher
+finger		79/tcp
+http		80/tcp		www		# WorldWideWeb HTTP
+kerberos	88/tcp		kerberos5 krb5 kerberos-sec	# Kerberos v5
+kerberos	88/udp		kerberos5 krb5 kerberos-sec	# Kerberos v5
+iso-tsap	102/tcp		tsap		# part of ISODE
+acr-nema	104/tcp		dicom		# Digital Imag. & Comm. 300
+pop3		110/tcp		pop-3		# POP version 3
+sunrpc		111/tcp		portmapper	# RPC 4.0 portmapper
+sunrpc		111/udp		portmapper
+auth		113/tcp		authentication tap ident
+nntp		119/tcp		readnews untp	# USENET News Transfer Protocol
+ntp		123/udp				# Network Time Protocol
+epmap		135/tcp		loc-srv		# DCE endpoint resolution
+netbios-ns	137/udp				# NETBIOS Name Service
+netbios-dgm	138/udp				# NETBIOS Datagram Service
+netbios-ssn	139/tcp				# NETBIOS session service
+imap2		143/tcp		imap		# Interim Mail Access P 2 and 4
+snmp		161/tcp				# Simple Net Mgmt Protocol
+snmp		161/udp
+snmp-trap	162/tcp		snmptrap	# Traps for SNMP
+snmp-trap	162/udp		snmptrap
+cmip-man	163/tcp				# ISO mgmt over IP (CMOT)
+cmip-man	163/udp
+cmip-agent	164/tcp
+cmip-agent	164/udp
+mailq		174/tcp			# Mailer transport queue for Zmailer
+xdmcp		177/udp			# X Display Manager Control Protocol
+bgp		179/tcp				# Border Gateway Protocol
+smux		199/tcp				# SNMP Unix Multiplexer
+qmtp		209/tcp				# Quick Mail Transfer Protocol
+z3950		210/tcp		wais		# NISO Z39.50 database
+ipx		213/udp				# IPX [RFC1234]
+ptp-event	319/udp
+ptp-general	320/udp
+pawserv		345/tcp				# Perf Analysis Workbench
+zserv		346/tcp				# Zebra server
+rpc2portmap	369/tcp
+rpc2portmap	369/udp				# Coda portmapper
+codaauth2	370/tcp
+codaauth2	370/udp				# Coda authentication server
+clearcase	371/udp		Clearcase
+ldap		389/tcp			# Lightweight Directory Access Protocol
+ldap		389/udp
+svrloc		427/tcp				# Server Location
+svrloc		427/udp
+https		443/tcp				# http protocol over TLS/SSL
+https		443/udp				# HTTP/3
+snpp		444/tcp				# Simple Network Paging Protocol
+microsoft-ds	445/tcp				# Microsoft Naked CIFS
+kpasswd		464/tcp
+kpasswd		464/udp
+submissions	465/tcp		ssmtp smtps urd # Submission over TLS [RFC8314]
+saft		487/tcp			# Simple Asynchronous File Transfer
+isakmp		500/udp				# IPSEC key management
+rtsp		554/tcp			# Real Time Stream Control Protocol
+rtsp		554/udp
+nqs		607/tcp				# Network Queuing system
+asf-rmcp	623/udp		# ASF Remote Management and Control Protocol
+qmqp		628/tcp
+ipp		631/tcp				# Internet Printing Protocol
+ldp		646/tcp				# Label Distribution Protocol
+ldp		646/udp
+exec		512/tcp
+biff		512/udp		comsat
+login		513/tcp
+who		513/udp		whod
+shell		514/tcp		cmd syslog	# no passwords used
+syslog		514/udp
+printer		515/tcp		spooler		# line printer spooler
+talk		517/udp
+ntalk		518/udp
+route		520/udp		router routed	# RIP
+gdomap		538/tcp				# GNUstep distributed objects
+gdomap		538/udp
+uucp		540/tcp		uucpd		# uucp daemon
+klogin		543/tcp				# Kerberized `rlogin' (v5)
+kshell		544/tcp		krcmd		# Kerberized `rsh' (v5)
+dhcpv6-client	546/udp
+dhcpv6-server	547/udp
+afpovertcp	548/tcp				# AFP over TCP
+nntps		563/tcp		snntp		# NNTP over SSL
+submission	587/tcp				# Submission [RFC4409]
+ldaps		636/tcp				# LDAP over SSL
+ldaps		636/udp
+tinc		655/tcp				# tinc control port
+tinc		655/udp
+silc		706/tcp
+kerberos-adm	749/tcp				# Kerberos `kadmin' (v5)
+domain-s	853/tcp				# DNS over TLS [RFC7858]
+domain-s	853/udp				# DNS over DTLS [RFC8094]
+rsync		873/tcp
+ftps-data	989/tcp				# FTP over SSL (data)
+ftps		990/tcp
+telnets		992/tcp				# Telnet over SSL
+imaps		993/tcp				# IMAP over SSL
+pop3s		995/tcp				# POP-3 over SSL
+#> Ports are used in the TCP [45,106] to name the ends of logical
+socks		1080/tcp			# socks proxy server
+proofd		1093/tcp
+rootd		1094/tcp
+openvpn		1194/tcp
+openvpn		1194/udp
+rmiregistry	1099/tcp			# Java RMI Registry
+lotusnote	1352/tcp	lotusnotes	# Lotus Note
+ms-sql-s	1433/tcp			# Microsoft SQL Server
+ms-sql-m	1434/udp			# Microsoft SQL Monitor
+ingreslock	1524/tcp
+datametrics	1645/tcp	old-radius
+datametrics	1645/udp	old-radius
+sa-msg-port	1646/tcp	old-radacct
+sa-msg-port	1646/udp	old-radacct
+kermit		1649/tcp
+groupwise	1677/tcp
+l2f		1701/udp	l2tp
+radius		1812/tcp
+radius		1812/udp
+radius-acct	1813/tcp	radacct		# Radius Accounting
+radius-acct	1813/udp	radacct
+cisco-sccp	2000/tcp			# Cisco SCCP
+nfs		2049/tcp			# Network File System
+nfs		2049/udp			# Network File System
+gnunet		2086/tcp
+gnunet		2086/udp
+rtcm-sc104	2101/tcp			# RTCM SC-104 IANA 1/29/99
+rtcm-sc104	2101/udp
+gsigatekeeper	2119/tcp
+gris		2135/tcp		# Grid Resource Information Server
+cvspserver	2401/tcp			# CVS client/server operations
+venus		2430/tcp			# codacon port
+venus		2430/udp			# Venus callback/wbc interface
+venus-se	2431/tcp			# tcp side effects
+venus-se	2431/udp			# udp sftp side effect
+codasrv		2432/tcp			# not used
+codasrv		2432/udp			# server port
+codasrv-se	2433/tcp			# tcp side effects
+codasrv-se	2433/udp			# udp sftp side effect
+mon		2583/tcp			# MON traps
+mon		2583/udp
+dict		2628/tcp			# Dictionary server
+f5-globalsite	2792/tcp
+gsiftp		2811/tcp
+gpsd		2947/tcp
+gds-db		3050/tcp	gds_db		# InterBase server
+icpv2		3130/udp	icp		# Internet Cache Protocol
+isns		3205/tcp			# iSNS Server Port
+isns		3205/udp			# iSNS Server Port
+iscsi-target	3260/tcp
+mysql		3306/tcp
+ms-wbt-server	3389/tcp
+nut		3493/tcp			# Network UPS Tools
+nut		3493/udp
+distcc		3632/tcp			# distributed compiler
+daap		3689/tcp			# Digital Audio Access Protocol
+svn		3690/tcp	subversion	# Subversion protocol
+suucp		4031/tcp			# UUCP over SSL
+sysrqd		4094/tcp			# sysrq daemon
+sieve		4190/tcp			# ManageSieve Protocol
+epmd		4369/tcp			# Erlang Port Mapper Daemon
+remctl		4373/tcp		# Remote Authenticated Command Service
+f5-iquery	4353/tcp			# F5 iQuery
+ntske		4460/tcp	# Network Time Security Key Establishment
+ipsec-nat-t	4500/udp			# IPsec NAT-Traversal [RFC3947]
+iax		4569/udp			# Inter-Asterisk eXchange
+mtn		4691/tcp			# monotone Netsync Protocol
+radmin-port	4899/tcp			# RAdmin Port
+sip		5060/tcp			# Session Initiation Protocol
+sip		5060/udp
+sip-tls		5061/tcp
+sip-tls		5061/udp
+xmpp-client	5222/tcp	jabber-client	# Jabber Client Connection
+xmpp-server	5269/tcp	jabber-server	# Jabber Server Connection
+cfengine	5308/tcp
+mdns		5353/udp			# Multicast DNS
+postgresql	5432/tcp	postgres	# PostgreSQL Database
+freeciv		5556/tcp	rptp		# Freeciv gameplay
+amqps		5671/tcp			# AMQP protocol over TLS/SSL
+amqp		5672/tcp
+amqp		5672/sctp
+x11		6000/tcp	x11-0		# X Window System
+x11-1		6001/tcp
+x11-2		6002/tcp
+x11-3		6003/tcp
+x11-4		6004/tcp
+x11-5		6005/tcp
+x11-6		6006/tcp
+x11-7		6007/tcp
+gnutella-svc	6346/tcp			# gnutella
+gnutella-svc	6346/udp
+gnutella-rtr	6347/tcp			# gnutella
+gnutella-rtr	6347/udp
+redis		6379/tcp
+sge-qmaster	6444/tcp	sge_qmaster	# Grid Engine Qmaster Service
+sge-execd	6445/tcp	sge_execd	# Grid Engine Execution Service
+mysql-proxy	6446/tcp			# MySQL Proxy
+babel		6696/udp			# Babel Routing Protocol
+ircs-u		6697/tcp		# Internet Relay Chat via TLS/SSL
+bbs		7000/tcp
+afs3-fileserver 7000/udp
+afs3-callback	7001/udp			# callbacks to cache managers
+afs3-prserver	7002/udp			# users & groups database
+afs3-vlserver	7003/udp			# volume location database
+afs3-kaserver	7004/udp			# AFS/Kerberos authentication
+afs3-volser	7005/udp			# volume managment server
+afs3-bos	7007/udp			# basic overseer process
+afs3-update	7008/udp			# server-to-server updater
+afs3-rmtsys	7009/udp			# remote cache manager service
+font-service	7100/tcp	xfs		# X Font Service
+http-alt	8080/tcp	webcache	# WWW caching service
+puppet		8140/tcp			# The Puppet master service
+bacula-dir	9101/tcp			# Bacula Director
+bacula-fd	9102/tcp			# Bacula File Daemon
+bacula-sd	9103/tcp			# Bacula Storage Daemon
+xmms2		9667/tcp	# Cross-platform Music Multiplexing System
+nbd		10809/tcp			# Linux Network Block Device
+zabbix-agent	10050/tcp			# Zabbix Agent
+zabbix-trapper	10051/tcp			# Zabbix Trapper
+amanda		10080/tcp			# amanda backup services
+dicom		11112/tcp
+hkp		11371/tcp			# OpenPGP HTTP Keyserver
+db-lsp		17500/tcp			# Dropbox LanSync Protocol
+dcap		22125/tcp			# dCache Access Protocol
+gsidcap		22128/tcp			# GSI dCache Access Protocol
+wnn6		22273/tcp			# wnn6
+rtmp		1/ddp			# Routing Table Maintenance Protocol
+nbp		2/ddp			# Name Binding Protocol
+echo		4/ddp			# AppleTalk Echo Protocol
+zip		6/ddp			# Zone Information Protocol
+kerberos4	750/udp		kerberos-iv kdc	# Kerberos (server)
+kerberos4	750/tcp		kerberos-iv kdc
+kerberos-master	751/udp		kerberos_master	# Kerberos authentication
+kerberos-master	751/tcp
+passwd-server	752/udp		passwd_server	# Kerberos passwd server
+krb-prop	754/tcp		krb_prop krb5_prop hprop # Kerberos slave propagation
+zephyr-srv	2102/udp			# Zephyr server
+zephyr-clt	2103/udp			# Zephyr serv-hm connection
+zephyr-hm	2104/udp			# Zephyr hostmanager
+iprop		2121/tcp			# incremental propagation
+supfilesrv	871/tcp			# Software Upgrade Protocol server
+supfiledbg	1127/tcp		# Software Upgrade Protocol debugging
+poppassd	106/tcp				# Eudora
+moira-db	775/tcp		moira_db	# Moira database
+moira-update	777/tcp		moira_update	# Moira update protocol
+moira-ureg	779/udp		moira_ureg	# Moira user registration
+spamd		783/tcp				# spamassassin daemon
+skkserv		1178/tcp			# skk jisho server port
+predict		1210/udp			# predict -- satellite tracking
+rmtcfg		1236/tcp			# Gracilis Packeten remote config server
+xtel		1313/tcp			# french minitel
+xtelw		1314/tcp			# french minitel
+zebrasrv	2600/tcp			# zebra service
+zebra		2601/tcp			# zebra vty
+ripd		2602/tcp			# ripd vty (zebra)
+ripngd		2603/tcp			# ripngd vty (zebra)
+ospfd		2604/tcp			# ospfd vty (zebra)
+bgpd		2605/tcp			# bgpd vty (zebra)
+ospf6d		2606/tcp			# ospf6d vty (zebra)
+ospfapi		2607/tcp			# OSPF-API
+isisd		2608/tcp			# ISISd vty (zebra)
+fax		4557/tcp			# FAX transmission service (old)
+hylafax		4559/tcp			# HylaFAX client-server protocol (new)
+munin		4949/tcp	lrrd		# Munin
+rplay		5555/udp			# RPlay audio service
+nrpe		5666/tcp			# Nagios Remote Plugin Executor
+nsca		5667/tcp			# Nagios Agent - NSCA
+canna		5680/tcp			# cannaserver
+syslog-tls	6514/tcp			# Syslog over TLS [RFC5425]
+sane-port	6566/tcp	sane saned	# SANE network scanner daemon
+ircd		6667/tcp			# Internet Relay Chat
+zope-ftp	8021/tcp			# zope management by ftp
+tproxy		8081/tcp			# Transparent Proxy
+omniorb		8088/tcp			# OmniORB
+clc-build-daemon 8990/tcp			# Common lisp build daemon
+xinetd		9098/tcp
+git		9418/tcp			# Git Version Control System
+zope		9673/tcp			# zope server
+webmin		10000/tcp
+kamanda		10081/tcp			# amanda backup services (Kerberos)
+amandaidx	10082/tcp			# amanda backup services
+amidxtape	10083/tcp			# amanda backup services
+sgi-cmsd	17001/udp		# Cluster membership services daemon
+sgi-crsd	17002/udp
+sgi-gcd		17003/udp			# SGI Group membership daemon
+sgi-cad		17004/tcp			# Cluster Admin daemon
+binkp		24554/tcp			# binkp fidonet protocol
+asp		27374/tcp			# Address Search Protocol
+asp		27374/udp
+csync2		30865/tcp			# cluster synchronization tool
+dircproxy	57000/tcp			# Detachable IRC Proxy
+tfido		60177/tcp			# fidonet EMSI over telnet
+fido		60179/tcp			# fidonet EMSI over TCP
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ grep ^[0-9] services 
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ grep -n  [0-9] services 
+9:tcpmux		1/tcp				# TCP port service multiplexer
+10:echo		7/tcp
+11:echo		7/udp
+12:discard		9/tcp		sink null
+13:discard		9/udp		sink null
+14:systat		11/tcp		users
+15:daytime		13/tcp
+16:daytime		13/udp
+17:netstat		15/tcp
+18:qotd		17/tcp		quote
+19:chargen		19/tcp		ttytst source
+20:chargen		19/udp		ttytst source
+21:ftp-data	20/tcp
+22:ftp		21/tcp
+23:fsp		21/udp		fspd
+24:ssh		22/tcp				# SSH Remote Login Protocol
+25:telnet		23/tcp
+26:smtp		25/tcp		mail
+27:time		37/tcp		timserver
+28:time		37/udp		timserver
+29:whois		43/tcp		nicname
+30:tacacs		49/tcp				# Login Host Protocol (TACACS)
+31:tacacs		49/udp
+32:domain		53/tcp				# Domain Name Server
+33:domain		53/udp
+34:bootps		67/udp
+35:bootpc		68/udp
+36:tftp		69/udp
+37:gopher		70/tcp				# Internet Gopher
+38:finger		79/tcp
+39:http		80/tcp		www		# WorldWideWeb HTTP
+40:kerberos	88/tcp		kerberos5 krb5 kerberos-sec	# Kerberos v5
+41:kerberos	88/udp		kerberos5 krb5 kerberos-sec	# Kerberos v5
+42:iso-tsap	102/tcp		tsap		# part of ISODE
+43:acr-nema	104/tcp		dicom		# Digital Imag. & Comm. 300
+44:pop3		110/tcp		pop-3		# POP version 3
+45:sunrpc		111/tcp		portmapper	# RPC 4.0 portmapper
+46:sunrpc		111/udp		portmapper
+47:auth		113/tcp		authentication tap ident
+48:nntp		119/tcp		readnews untp	# USENET News Transfer Protocol
+49:ntp		123/udp				# Network Time Protocol
+50:epmap		135/tcp		loc-srv		# DCE endpoint resolution
+51:netbios-ns	137/udp				# NETBIOS Name Service
+52:netbios-dgm	138/udp				# NETBIOS Datagram Service
+53:netbios-ssn	139/tcp				# NETBIOS session service
+54:imap2		143/tcp		imap		# Interim Mail Access P 2 and 4
+55:snmp		161/tcp				# Simple Net Mgmt Protocol
+56:snmp		161/udp
+57:snmp-trap	162/tcp		snmptrap	# Traps for SNMP
+58:snmp-trap	162/udp		snmptrap
+59:cmip-man	163/tcp				# ISO mgmt over IP (CMOT)
+60:cmip-man	163/udp
+61:cmip-agent	164/tcp
+62:cmip-agent	164/udp
+63:mailq		174/tcp			# Mailer transport queue for Zmailer
+64:xdmcp		177/udp			# X Display Manager Control Protocol
+65:bgp		179/tcp				# Border Gateway Protocol
+66:smux		199/tcp				# SNMP Unix Multiplexer
+67:qmtp		209/tcp				# Quick Mail Transfer Protocol
+68:z3950		210/tcp		wais		# NISO Z39.50 database
+69:ipx		213/udp				# IPX [RFC1234]
+70:ptp-event	319/udp
+71:ptp-general	320/udp
+72:pawserv		345/tcp				# Perf Analysis Workbench
+73:zserv		346/tcp				# Zebra server
+74:rpc2portmap	369/tcp
+75:rpc2portmap	369/udp				# Coda portmapper
+76:codaauth2	370/tcp
+77:codaauth2	370/udp				# Coda authentication server
+78:clearcase	371/udp		Clearcase
+79:ldap		389/tcp			# Lightweight Directory Access Protocol
+80:ldap		389/udp
+81:svrloc		427/tcp				# Server Location
+82:svrloc		427/udp
+83:https		443/tcp				# http protocol over TLS/SSL
+84:https		443/udp				# HTTP/3
+85:snpp		444/tcp				# Simple Network Paging Protocol
+86:microsoft-ds	445/tcp				# Microsoft Naked CIFS
+87:kpasswd		464/tcp
+88:kpasswd		464/udp
+89:submissions	465/tcp		ssmtp smtps urd # Submission over TLS [RFC8314]
+90:saft		487/tcp			# Simple Asynchronous File Transfer
+91:isakmp		500/udp				# IPSEC key management
+92:rtsp		554/tcp			# Real Time Stream Control Protocol
+93:rtsp		554/udp
+94:nqs		607/tcp				# Network Queuing system
+95:asf-rmcp	623/udp		# ASF Remote Management and Control Protocol
+96:qmqp		628/tcp
+97:ipp		631/tcp				# Internet Printing Protocol
+98:ldp		646/tcp				# Label Distribution Protocol
+99:ldp		646/udp
+103:exec		512/tcp
+104:biff		512/udp		comsat
+105:login		513/tcp
+106:who		513/udp		whod
+107:shell		514/tcp		cmd syslog	# no passwords used
+108:syslog		514/udp
+109:printer		515/tcp		spooler		# line printer spooler
+110:talk		517/udp
+111:ntalk		518/udp
+112:route		520/udp		router routed	# RIP
+113:gdomap		538/tcp				# GNUstep distributed objects
+114:gdomap		538/udp
+115:uucp		540/tcp		uucpd		# uucp daemon
+116:klogin		543/tcp				# Kerberized `rlogin' (v5)
+117:kshell		544/tcp		krcmd		# Kerberized `rsh' (v5)
+118:dhcpv6-client	546/udp
+119:dhcpv6-server	547/udp
+120:afpovertcp	548/tcp				# AFP over TCP
+121:nntps		563/tcp		snntp		# NNTP over SSL
+122:submission	587/tcp				# Submission [RFC4409]
+123:ldaps		636/tcp				# LDAP over SSL
+124:ldaps		636/udp
+125:tinc		655/tcp				# tinc control port
+126:tinc		655/udp
+127:silc		706/tcp
+128:kerberos-adm	749/tcp				# Kerberos `kadmin' (v5)
+130:domain-s	853/tcp				# DNS over TLS [RFC7858]
+131:domain-s	853/udp				# DNS over DTLS [RFC8094]
+132:rsync		873/tcp
+133:ftps-data	989/tcp				# FTP over SSL (data)
+134:ftps		990/tcp
+135:telnets		992/tcp				# Telnet over SSL
+136:imaps		993/tcp				# IMAP over SSL
+137:pop3s		995/tcp				# POP-3 over SSL
+145:#> Ports are used in the TCP [45,106] to name the ends of logical
+153:socks		1080/tcp			# socks proxy server
+154:proofd		1093/tcp
+155:rootd		1094/tcp
+156:openvpn		1194/tcp
+157:openvpn		1194/udp
+158:rmiregistry	1099/tcp			# Java RMI Registry
+159:lotusnote	1352/tcp	lotusnotes	# Lotus Note
+160:ms-sql-s	1433/tcp			# Microsoft SQL Server
+161:ms-sql-m	1434/udp			# Microsoft SQL Monitor
+162:ingreslock	1524/tcp
+163:datametrics	1645/tcp	old-radius
+164:datametrics	1645/udp	old-radius
+165:sa-msg-port	1646/tcp	old-radacct
+166:sa-msg-port	1646/udp	old-radacct
+167:kermit		1649/tcp
+168:groupwise	1677/tcp
+169:l2f		1701/udp	l2tp
+170:radius		1812/tcp
+171:radius		1812/udp
+172:radius-acct	1813/tcp	radacct		# Radius Accounting
+173:radius-acct	1813/udp	radacct
+174:cisco-sccp	2000/tcp			# Cisco SCCP
+175:nfs		2049/tcp			# Network File System
+176:nfs		2049/udp			# Network File System
+177:gnunet		2086/tcp
+178:gnunet		2086/udp
+179:rtcm-sc104	2101/tcp			# RTCM SC-104 IANA 1/29/99
+180:rtcm-sc104	2101/udp
+181:gsigatekeeper	2119/tcp
+182:gris		2135/tcp		# Grid Resource Information Server
+183:cvspserver	2401/tcp			# CVS client/server operations
+184:venus		2430/tcp			# codacon port
+185:venus		2430/udp			# Venus callback/wbc interface
+186:venus-se	2431/tcp			# tcp side effects
+187:venus-se	2431/udp			# udp sftp side effect
+188:codasrv		2432/tcp			# not used
+189:codasrv		2432/udp			# server port
+190:codasrv-se	2433/tcp			# tcp side effects
+191:codasrv-se	2433/udp			# udp sftp side effect
+192:mon		2583/tcp			# MON traps
+193:mon		2583/udp
+194:dict		2628/tcp			# Dictionary server
+195:f5-globalsite	2792/tcp
+196:gsiftp		2811/tcp
+197:gpsd		2947/tcp
+198:gds-db		3050/tcp	gds_db		# InterBase server
+199:icpv2		3130/udp	icp		# Internet Cache Protocol
+200:isns		3205/tcp			# iSNS Server Port
+201:isns		3205/udp			# iSNS Server Port
+202:iscsi-target	3260/tcp
+203:mysql		3306/tcp
+204:ms-wbt-server	3389/tcp
+205:nut		3493/tcp			# Network UPS Tools
+206:nut		3493/udp
+207:distcc		3632/tcp			# distributed compiler
+208:daap		3689/tcp			# Digital Audio Access Protocol
+209:svn		3690/tcp	subversion	# Subversion protocol
+210:suucp		4031/tcp			# UUCP over SSL
+211:sysrqd		4094/tcp			# sysrq daemon
+212:sieve		4190/tcp			# ManageSieve Protocol
+213:epmd		4369/tcp			# Erlang Port Mapper Daemon
+214:remctl		4373/tcp		# Remote Authenticated Command Service
+215:f5-iquery	4353/tcp			# F5 iQuery
+216:ntske		4460/tcp	# Network Time Security Key Establishment
+217:ipsec-nat-t	4500/udp			# IPsec NAT-Traversal [RFC3947]
+218:iax		4569/udp			# Inter-Asterisk eXchange
+219:mtn		4691/tcp			# monotone Netsync Protocol
+220:radmin-port	4899/tcp			# RAdmin Port
+221:sip		5060/tcp			# Session Initiation Protocol
+222:sip		5060/udp
+223:sip-tls		5061/tcp
+224:sip-tls		5061/udp
+225:xmpp-client	5222/tcp	jabber-client	# Jabber Client Connection
+226:xmpp-server	5269/tcp	jabber-server	# Jabber Server Connection
+227:cfengine	5308/tcp
+228:mdns		5353/udp			# Multicast DNS
+229:postgresql	5432/tcp	postgres	# PostgreSQL Database
+230:freeciv		5556/tcp	rptp		# Freeciv gameplay
+231:amqps		5671/tcp			# AMQP protocol over TLS/SSL
+232:amqp		5672/tcp
+233:amqp		5672/sctp
+234:x11		6000/tcp	x11-0		# X Window System
+235:x11-1		6001/tcp
+236:x11-2		6002/tcp
+237:x11-3		6003/tcp
+238:x11-4		6004/tcp
+239:x11-5		6005/tcp
+240:x11-6		6006/tcp
+241:x11-7		6007/tcp
+242:gnutella-svc	6346/tcp			# gnutella
+243:gnutella-svc	6346/udp
+244:gnutella-rtr	6347/tcp			# gnutella
+245:gnutella-rtr	6347/udp
+246:redis		6379/tcp
+247:sge-qmaster	6444/tcp	sge_qmaster	# Grid Engine Qmaster Service
+248:sge-execd	6445/tcp	sge_execd	# Grid Engine Execution Service
+249:mysql-proxy	6446/tcp			# MySQL Proxy
+250:babel		6696/udp			# Babel Routing Protocol
+251:ircs-u		6697/tcp		# Internet Relay Chat via TLS/SSL
+252:bbs		7000/tcp
+253:afs3-fileserver 7000/udp
+254:afs3-callback	7001/udp			# callbacks to cache managers
+255:afs3-prserver	7002/udp			# users & groups database
+256:afs3-vlserver	7003/udp			# volume location database
+257:afs3-kaserver	7004/udp			# AFS/Kerberos authentication
+258:afs3-volser	7005/udp			# volume managment server
+259:afs3-bos	7007/udp			# basic overseer process
+260:afs3-update	7008/udp			# server-to-server updater
+261:afs3-rmtsys	7009/udp			# remote cache manager service
+262:font-service	7100/tcp	xfs		# X Font Service
+263:http-alt	8080/tcp	webcache	# WWW caching service
+264:puppet		8140/tcp			# The Puppet master service
+265:bacula-dir	9101/tcp			# Bacula Director
+266:bacula-fd	9102/tcp			# Bacula File Daemon
+267:bacula-sd	9103/tcp			# Bacula Storage Daemon
+268:xmms2		9667/tcp	# Cross-platform Music Multiplexing System
+269:nbd		10809/tcp			# Linux Network Block Device
+270:zabbix-agent	10050/tcp			# Zabbix Agent
+271:zabbix-trapper	10051/tcp			# Zabbix Trapper
+272:amanda		10080/tcp			# amanda backup services
+273:dicom		11112/tcp
+274:hkp		11371/tcp			# OpenPGP HTTP Keyserver
+275:db-lsp		17500/tcp			# Dropbox LanSync Protocol
+276:dcap		22125/tcp			# dCache Access Protocol
+277:gsidcap		22128/tcp			# GSI dCache Access Protocol
+278:wnn6		22273/tcp			# wnn6
+283:rtmp		1/ddp			# Routing Table Maintenance Protocol
+284:nbp		2/ddp			# Name Binding Protocol
+285:echo		4/ddp			# AppleTalk Echo Protocol
+286:zip		6/ddp			# Zone Information Protocol
+293:kerberos4	750/udp		kerberos-iv kdc	# Kerberos (server)
+294:kerberos4	750/tcp		kerberos-iv kdc
+295:kerberos-master	751/udp		kerberos_master	# Kerberos authentication
+296:kerberos-master	751/tcp
+297:passwd-server	752/udp		passwd_server	# Kerberos passwd server
+298:krb-prop	754/tcp		krb_prop krb5_prop hprop # Kerberos slave propagation
+299:zephyr-srv	2102/udp			# Zephyr server
+300:zephyr-clt	2103/udp			# Zephyr serv-hm connection
+301:zephyr-hm	2104/udp			# Zephyr hostmanager
+302:iprop		2121/tcp			# incremental propagation
+303:supfilesrv	871/tcp			# Software Upgrade Protocol server
+304:supfiledbg	1127/tcp		# Software Upgrade Protocol debugging
+309:poppassd	106/tcp				# Eudora
+310:moira-db	775/tcp		moira_db	# Moira database
+311:moira-update	777/tcp		moira_update	# Moira update protocol
+312:moira-ureg	779/udp		moira_ureg	# Moira user registration
+313:spamd		783/tcp				# spamassassin daemon
+314:skkserv		1178/tcp			# skk jisho server port
+315:predict		1210/udp			# predict -- satellite tracking
+316:rmtcfg		1236/tcp			# Gracilis Packeten remote config server
+317:xtel		1313/tcp			# french minitel
+318:xtelw		1314/tcp			# french minitel
+319:zebrasrv	2600/tcp			# zebra service
+320:zebra		2601/tcp			# zebra vty
+321:ripd		2602/tcp			# ripd vty (zebra)
+322:ripngd		2603/tcp			# ripngd vty (zebra)
+323:ospfd		2604/tcp			# ospfd vty (zebra)
+324:bgpd		2605/tcp			# bgpd vty (zebra)
+325:ospf6d		2606/tcp			# ospf6d vty (zebra)
+326:ospfapi		2607/tcp			# OSPF-API
+327:isisd		2608/tcp			# ISISd vty (zebra)
+328:fax		4557/tcp			# FAX transmission service (old)
+329:hylafax		4559/tcp			# HylaFAX client-server protocol (new)
+330:munin		4949/tcp	lrrd		# Munin
+331:rplay		5555/udp			# RPlay audio service
+332:nrpe		5666/tcp			# Nagios Remote Plugin Executor
+333:nsca		5667/tcp			# Nagios Agent - NSCA
+334:canna		5680/tcp			# cannaserver
+335:syslog-tls	6514/tcp			# Syslog over TLS [RFC5425]
+336:sane-port	6566/tcp	sane saned	# SANE network scanner daemon
+337:ircd		6667/tcp			# Internet Relay Chat
+338:zope-ftp	8021/tcp			# zope management by ftp
+339:tproxy		8081/tcp			# Transparent Proxy
+340:omniorb		8088/tcp			# OmniORB
+341:clc-build-daemon 8990/tcp			# Common lisp build daemon
+342:xinetd		9098/tcp
+343:git		9418/tcp			# Git Version Control System
+344:zope		9673/tcp			# zope server
+345:webmin		10000/tcp
+346:kamanda		10081/tcp			# amanda backup services (Kerberos)
+347:amandaidx	10082/tcp			# amanda backup services
+348:amidxtape	10083/tcp			# amanda backup services
+349:sgi-cmsd	17001/udp		# Cluster membership services daemon
+350:sgi-crsd	17002/udp
+351:sgi-gcd		17003/udp			# SGI Group membership daemon
+352:sgi-cad		17004/tcp			# Cluster Admin daemon
+353:binkp		24554/tcp			# binkp fidonet protocol
+354:asp		27374/tcp			# Address Search Protocol
+355:asp		27374/udp
+356:csync2		30865/tcp			# cluster synchronization tool
+357:dircproxy	57000/tcp			# Detachable IRC Proxy
+358:tfido		60177/tcp			# fidonet EMSI over telnet
+359:fido		60179/tcp			# fidonet EMSI over TCP
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ find /home/elsaidy-electric -name  "*.txt"
+/home/elsaidy-electric/.oh-my-zsh/plugins/golang/templates/search.txt
+/home/elsaidy-electric/.oh-my-zsh/plugins/golang/templates/package.txt
+/home/elsaidy-electric/.oh-my-zsh/plugins/emoji/emoji-data.txt
+/home/elsaidy-electric/.oh-my-zsh/LICENSE.txt
+/home/elsaidy-electric/.oh-my-zsh/.github/workflows/dependencies/requirements.txt
+/home/elsaidy-electric/gitdemo/test.txt
+/home/elsaidy-electric/.thunderbird/fa3scpqm.default-release/pkcs11.txt
+/home/elsaidy-electric/.thunderbird/fa3scpqm.default-release/encrypted-openpgp-passphrase.txt
+/home/elsaidy-electric/tasks/taskd1.txt
+/home/elsaidy-electric/.cache/tracker3/files/locale-for-miner-apps.txt
+/home/elsaidy-electric/.cache/tracker3/files/last-crawl.txt
+/home/elsaidy-electric/.cache/tracker3/files/first-index.txt
+/home/elsaidy-electric/home/elsaidy-electric/iot_logger/taskd1.txt
+/home/elsaidy-electric/snap/firefox/common/.mozilla/firefox/fp7mdn8q.default/pkcs11.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/data$ cd
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd home
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ cd elsaidy-electric/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ find -name "*.txt"
+./iot_logger/taskd1.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ /home/elsaidy-electric/iot_logger/logs/temperature.log ~/home/hard_link_temp 
+bash: /home/elsaidy-electric/iot_logger/logs/temperature.log: No such file or directory
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ ln /home/elsaidy-electric/iot_logger/logs/temperature.log ~/home/hard_link_temp 
+ln: failed to access '/home/elsaidy-electric/iot_logger/logs/temperature.log': No such file or directory
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ ln ~/home/elsaidy-electric/iot_logger/logs/temperature.log ~/home/hard_link_temp 
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd home/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ ls
+elsaidy-electric  hard_link_temp
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ ln -s  ~/home/elsaidy-electric/iot_logger/logs/temperature.log ~/home/symbolic_link_temp 
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ cd
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd -
+/home/elsaidy-electric/home
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ ls
+elsaidy-electric  hard_link_temp  symbolic_link_temp
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ ls -l
+total 8
+drwxrwxr-x 3 elsaidy-electric elsaidy-electric 4096 أغس 30 22:11 elsaidy-electric
+-rw-rw-r-- 2 elsaidy-electric elsaidy-electric    0 أغس 31 11:03 hard_link_temp
+lrwxrwxrwx 1 elsaidy-electric elsaidy-electric   76 أغس 31 11:43 symbolic_link_temp -> /home/elsaidy-electric/home/elsaidy-electric/iot_logger/logs/temperature.log
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ tree
+.
+├── elsaidy-electric
+│   └── iot_logger
+│       ├── data
+│       │   └── services
+│       ├── logs
+│       │   └── temperature.log
+│       ├── scripts
+│       │   └── sensor_script.py
+│       └── taskd1.txt
+├── hard_link_temp
+└── symbolic_link_temp -> /home/elsaidy-electric/home/elsaidy-electric/iot_logger/logs/temperature.log
+
+5 directories, 6 files
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$

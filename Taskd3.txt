@@ -1,0 +1,485 @@
+elsaidy-electric@elsaidyelectric-VirtualBox  ~  bash
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cat /etc/groups
+cat: /etc/groups: No such file or directory
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,elsaidy-electric
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:elsaidy-electric
+floppy:x:25:
+tape:x:26:
+sudo:x:27:elsaidy-electric
+audio:x:29:pulse
+dip:x:30:elsaidy-electric
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:elsaidy-electric
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+_ssh:x:112:
+tss:x:113:
+bluetooth:x:114:
+ssl-cert:x:115:
+uuidd:x:116:
+systemd-oom:x:117:
+tcpdump:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:elsaidy-electric
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+fwupd-refresh:x:126:
+nm-openvpn:x:127:
+scanner:x:128:saned
+saned:x:129:
+colord:x:130:
+geoclue:x:131:
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:elsaidy-electric
+elsaidy-electric:x:1000:
+sambashare:x:136:elsaidy-electric
+iot_team:x:1001:elsaidy-electric,kareem
+kareem:x:1002:
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ rmuser kareem
+rmuser: command not found
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ sudo groupdel kareem
+[sudo] password for elsaidy-electric: 
+groupdel: cannot remove the primary group of user 'kareem'
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,elsaidy-electric
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:elsaidy-electric
+floppy:x:25:
+tape:x:26:
+sudo:x:27:elsaidy-electric
+audio:x:29:pulse
+dip:x:30:elsaidy-electric
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:elsaidy-electric
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+_ssh:x:112:
+tss:x:113:
+bluetooth:x:114:
+ssl-cert:x:115:
+uuidd:x:116:
+systemd-oom:x:117:
+tcpdump:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:elsaidy-electric
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+fwupd-refresh:x:126:
+nm-openvpn:x:127:
+scanner:x:128:saned
+saned:x:129:
+colord:x:130:
+geoclue:x:131:
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:elsaidy-electric
+elsaidy-electric:x:1000:
+sambashare:x:136:elsaidy-electric
+iot_team:x:1001:elsaidy-electric,kareem
+kareem:x:1002:
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ man chown
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd home
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ cd elsaidy-electric/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ cd iot_logger/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ^C
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ cd
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ chown -R elsaidy-electric :iot_team ~/home/elsaidy-electric/iot_logger
+chown: cannot access ':iot_team': No such file or directory
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ chown -R elsaidy-electric: iot_team ~/home/elsaidy-electric/iot_logger
+chown: cannot access 'iot_team': No such file or directory
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ chown -R elsaidy-electric:iot_team ~/home/elsaidy-electric/iot_logger
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ ~/home/elsaidy-electric/iot_logger
+bash: /home/elsaidy-electric/home/elsaidy-electric/iot_logger: Is a directory
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ /home/elsaidy-electric/iot_loggerbash: /home/elsaidy-electric/iot_logger: No such file or directory
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd home/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home$ cd elsaidy-electric/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ cd
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd -
+/home/elsaidy-electric/home/elsaidy-electric
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ cd iot_logger/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls -l
+total 56
+drwxrwxr-x 2 elsaidy-electric iot_team  4096 أغس 31 11:09 data
+-rw-rw-r-- 1 elsaidy-electric iot_team     0 أغس 31 22:36 hard_link_temp
+drwxrwxr-x 2 elsaidy-electric iot_team  4096 أغس 31 11:03 logs
+drwxrwxr-x 2 elsaidy-electric iot_team  4096 أغس 31 11:03 scripts
+-rw-rw-r-- 1 elsaidy-electric iot_team     0 أغس 31 22:37 symbolic_link_temp
+-rw-rw-r-- 1 elsaidy-electric iot_team  6795 أغس 30 23:47 taskd1.txt
+-rw-rw-r-- 1 elsaidy-electric iot_team 32866 أغس 31 13:21 Taskd2.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ cd 
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd-
+Command 'cd-' not found, did you mean:
+  command 'cdw' from deb cdw (0.8.1-2)
+  command 'cd5' from deb cd5 (0.1-4)
+  command 'cdp' from deb irpas (0.10-9)
+  command 'cde' from deb cde (0.1+git9-g551e54d-1.2)
+  command 'cdb' from deb tinycdb (0.78build3)
+  command 'cdi' from deb cdo (2.0.4-1)
+  command 'cdo' from deb cdo (2.0.4-1)
+Try: sudo apt install <deb name>
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd -
+/home/elsaidy-electric/home/elsaidy-electric/iot_logger
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ cd ..
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ ls -l
+total 4
+drwxrwxr-x 6 elsaidy-electric iot_team 4096 أغس 31 22:37 iot_logger
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ cd
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ ls -l
+total 48
+drwxr-xr-x 2 elsaidy-electric elsaidy-electric 4096 أغس 27 21:38 Desktop
+drwxr-xr-x 2 elsaidy-electric elsaidy-electric 4096 أغس 27 21:38 Documents
+drwxr-xr-x 3 elsaidy-electric elsaidy-electric 4096 أغس 31 13:20 Downloads
+drwxrwxr-x 3 elsaidy-electric elsaidy-electric 4096 أغس 30 13:51 gitdemo
+drwxrwxr-x 3 elsaidy-electric elsaidy-electric 4096 أغس 31 11:43 home
+drwxr-xr-x 2 elsaidy-electric elsaidy-electric 4096 أغس 27 21:38 Music
+drwxr-xr-x 2 elsaidy-electric elsaidy-electric 4096 أغس 27 21:38 Pictures
+drwxr-xr-x 2 elsaidy-electric elsaidy-electric 4096 أغس 27 21:38 Public
+drwx------ 4 elsaidy-electric elsaidy-electric 4096 أغس 28 10:34 snap
+-rw-rw-r-- 1 elsaidy-electric elsaidy-electric    0 سبت  1 10:52 sudo
+drwxrwxr-x 2 elsaidy-electric elsaidy-electric 4096 أغس 30 23:44 tasks
+drwxr-xr-x 2 elsaidy-electric elsaidy-electric 4096 أغس 27 21:38 Templates
+drwxr-xr-x 2 elsaidy-electric elsaidy-electric 4096 أغس 27 21:38 Videos
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cd -
+/home/elsaidy-electric/home/elsaidy-electric
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ ls -l
+total 4
+drwxrwxr-x 6 elsaidy-electric iot_team 4096 أغس 31 22:37 iot_logger
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ cd iot_logger/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls
+data  hard_link_temp  logs  scripts  symbolic_link_temp  taskd1.txt  Taskd2.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls -l
+total 56
+drwxrwxr-x 2 elsaidy-electric iot_team  4096 أغس 31 11:09 data
+-rw-rw-r-- 1 elsaidy-electric iot_team     0 أغس 31 22:36 hard_link_temp
+drwxrwxr-x 2 elsaidy-electric iot_team  4096 أغس 31 11:03 logs
+drwxrwxr-x 2 elsaidy-electric iot_team  4096 أغس 31 11:03 scripts
+-rw-rw-r-- 1 elsaidy-electric iot_team     0 أغس 31 22:37 symbolic_link_temp
+-rw-rw-r-- 1 elsaidy-electric iot_team  6795 أغس 30 23:47 taskd1.txt
+-rw-rw-r-- 1 elsaidy-electric iot_team 32866 أغس 31 13:21 Taskd2.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ cd logs/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/logs$ ls -l
+total 0
+-rw-rw-r-- 2 elsaidy-electric iot_team 0 أغس 31 11:03 temperature.log
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger/logs$ cd ..
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ man chmod
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ chmod -R 750 logs
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls -l
+total 56
+drwxrwxr-x 2 elsaidy-electric iot_team  4096 أغس 31 11:09 data
+-rw-rw-r-- 1 elsaidy-electric iot_team     0 أغس 31 22:36 hard_link_temp
+drwxr-x--- 2 elsaidy-electric iot_team  4096 أغس 31 11:03 logs
+drwxrwxr-x 2 elsaidy-electric iot_team  4096 أغس 31 11:03 scripts
+-rw-rw-r-- 1 elsaidy-electric iot_team     0 أغس 31 22:37 symbolic_link_temp
+-rw-rw-r-- 1 elsaidy-electric iot_team  6795 أغس 30 23:47 taskd1.txt
+-rw-rw-r-- 1 elsaidy-electric iot_team 32866 أغس 31 13:21 Taskd2.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ chmod -R 760 logs
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls -l
+total 56
+drwxrwxr-x 2 elsaidy-electric iot_team  4096 أغس 31 11:09 data
+-rw-rw-r-- 1 elsaidy-electric iot_team     0 أغس 31 22:36 hard_link_temp
+drwxrw---- 2 elsaidy-electric iot_team  4096 أغس 31 11:03 logs
+drwxrwxr-x 2 elsaidy-electric iot_team  4096 أغس 31 11:03 scripts
+-rw-rw-r-- 1 elsaidy-electric iot_team     0 أغس 31 22:37 symbolic_link_temp
+-rw-rw-r-- 1 elsaidy-electric iot_team  6795 أغس 30 23:47 taskd1.txt
+-rw-rw-r-- 1 elsaidy-electric iot_team 32866 أغس 31 13:21 Taskd2.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ cd ..
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ chown -R kareem:iot_team ~/home/elsaidy-electric/iot_logger
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/symbolic_link_temp': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/taskd1.txt': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/c3/e4022c81f4e9090853ba19953e300681ae41b1': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/c3/3b53363b72843899b92dbe70baee80fad0682e': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/c3': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/f9/0e9de67987064565cab0035f0b7d5f8db4e5be': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/f9': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/a1/4c3125e48b1324eb6c82ac649df8a1b4566c7d': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/a1': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/info': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/c7/0b02f2f0ca22a77125e23530ce1e57c690b0ab': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/c7': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/pack': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/a8/1f2477cdaab0caa60d20f18c160b9cb719745e': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/a8': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/04/25f724bf37a786785ce7dc38708021e4f01152': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/04': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/7c/e435c5811fec655be238b1b41fabb1a6cc5505': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/7c': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/02/3f9763db6f089377f1cb7eb14dd2676cabc1ea': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/02': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/e6': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/6a/d4e5c29a2aaa62926652e42428f040cc027470': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/6a': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/9e/75a604216e353c9b3226c0d37a9cf37892c08d': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/9e': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/3b/9bc51e1ff14ea0b27e589437df3659505c17e7': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects/3b': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/objects': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/index': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/push-to-checkout.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/pre-applypatch.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/post-update.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/update.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/pre-rebase.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/pre-push.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/applypatch-msg.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/fsmonitor-watchman.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/pre-receive.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/pre-merge-commit.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/prepare-commit-msg.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/commit-msg.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks/pre-commit.sample': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/hooks': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/info/exclude': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/info': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/logs/refs/remotes/origin/main': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/logs/refs/remotes/origin': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/logs/refs/remotes': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/logs/refs/heads/main': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/logs/refs/heads': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/logs/refs': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/logs/HEAD': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/logs': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/refs/remotes/origin/main': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/refs/remotes/origin': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/refs/remotes': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/refs/tags': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/refs/heads/main': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/refs/heads': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/refs': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/COMMIT_EDITMSG': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/branches': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/description': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/HEAD': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git/config': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/.git': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/logs/temperature.log': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/logs': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/data/services': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/data': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/scripts/sensor_script.py': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/scripts': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/hard_link_temp': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/Taskd2.txt': Operation not permitted
+chown: changing ownership of '/home/elsaidy-electric/home/elsaidy-electric/iot_logger': Operation not permitted
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ sudo chown -R kareem:iot_team ~/home/elsaidy-electric/iot_logger
+[sudo] password for elsaidy-electric: 
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ ls -l
+total 4
+drwxrwxr-x 6 kareem iot_team 4096 أغس 31 22:37 iot_logger
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric$ cd iot_logger/
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls-l
+ls-l: command not found
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls 
+data  hard_link_temp  logs  scripts  symbolic_link_temp  taskd1.txt  Taskd2.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls-l
+ls-l: command not found
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ ls -l
+total 56
+drwxrwxr-x 2 kareem iot_team  4096 أغس 31 11:09 data
+-rw-rw-r-- 1 kareem iot_team     0 أغس 31 22:36 hard_link_temp
+drwxrw---- 2 kareem iot_team  4096 أغس 31 11:03 logs
+drwxrwxr-x 2 kareem iot_team  4096 أغس 31 11:03 scripts
+-rw-rw-r-- 1 kareem iot_team     0 أغس 31 22:37 symbolic_link_temp
+-rw-rw-r-- 1 kareem iot_team  6795 أغس 30 23:47 taskd1.txt
+-rw-rw-r-- 1 kareem iot_team 32866 أغس 31 13:21 Taskd2.txt
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$ man ls
+elsaidy-electric@elsaidyelectric-VirtualBox:~/home/elsaidy-electric/iot_logger$  
+elsaidy-electric@elsaidyelectric-VirtualBox  ~  bash
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ car /etc/passwod
+Command 'car' not found, but can be installed with:
+sudo apt install ucommon-utils
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ car /etc/passwd
+Command 'car' not found, but can be installed with:
+sudo apt install ucommon-utils
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+tss:x:106:113:TPM software stack,,,:/var/lib/tpm:/bin/false
+uuidd:x:107:116::/run/uuidd:/usr/sbin/nologin
+systemd-oom:x:108:117:systemd Userspace OOM Killer,,,:/run/systemd:/usr/sbin/nologin
+tcpdump:x:109:118::/nonexistent:/usr/sbin/nologin
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+kernoops:x:113:65534:Kernel Oops Tracking Daemon,,,:/:/usr/sbin/nologin
+avahi:x:114:121:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+cups-pk-helper:x:115:122:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+rtkit:x:116:123:RealtimeKit,,,:/proc:/usr/sbin/nologin
+whoopsie:x:117:124::/nonexistent:/bin/false
+sssd:x:118:125:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+speech-dispatcher:x:119:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+fwupd-refresh:x:120:126:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+nm-openvpn:x:121:127:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+saned:x:122:129::/var/lib/saned:/usr/sbin/nologin
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+elsaidy-electric:x:1000:1000:Elsaidy-electric ,,,:/home/elsaidy-electric:/usr/bin/zsh
+kareem:x:1001:1002:,,,:/home/kareem:/bin/bash
+test:x:1002:1003:test,,,:/home/test:/bin/bash
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ sudo userdel test
+[sudo] password for elsaidy-electric: 
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+tss:x:106:113:TPM software stack,,,:/var/lib/tpm:/bin/false
+uuidd:x:107:116::/run/uuidd:/usr/sbin/nologin
+systemd-oom:x:108:117:systemd Userspace OOM Killer,,,:/run/systemd:/usr/sbin/nologin
+tcpdump:x:109:118::/nonexistent:/usr/sbin/nologin
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+kernoops:x:113:65534:Kernel Oops Tracking Daemon,,,:/:/usr/sbin/nologin
+avahi:x:114:121:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+cups-pk-helper:x:115:122:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+rtkit:x:116:123:RealtimeKit,,,:/proc:/usr/sbin/nologin
+whoopsie:x:117:124::/nonexistent:/bin/false
+sssd:x:118:125:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+speech-dispatcher:x:119:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+fwupd-refresh:x:120:126:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+nm-openvpn:x:121:127:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+saned:x:122:129::/var/lib/saned:/usr/sbin/nologin
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+elsaidy-electric:x:1000:1000:Elsaidy-electric ,,,:/home/elsaidy-electric:/usr/bin/zsh
+kareem:x:1001:1002:,,,:/home/kareem:/bin/bash
+elsaidy-electric@elsaidyelectric-VirtualBox:~$ 
+

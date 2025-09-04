@@ -1,0 +1,111 @@
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home/elsaidy-electric/iot_logger/logs   main  sudo nano /etc/logrotate.d/temperature
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home/elsaidy-electric/iot_logger/logs   main  cd
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  sudo nano /etc/logrotate.d/temperature
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  sudo logrotate -f /etc/logrotate.d/temperature
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  ls -l ~/iot_logger/logs
+ls: cannot access '/home/elsaidy-electric/iot_logger/logs': No such file or directory
+ ✘ elsaidy-electric@elsaidyelectric-VirtualBox  ~  cd home         
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home  cd elsaidy-electric
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home/elsaidy-electric  cd iot_logger 
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home/elsaidy-electric/iot_logger   main  cd logs 
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home/elsaidy-electric/iot_logger/logs   main  ls -l
+total 24
+-rw-rw-r-- 1 elsaidy-electric elsaidy-electric    97 سبت  4 00:20 data_test.txt
+-rwxrw---- 2 elsaidy-electric iot_team         15130 سبت  4 00:14 temperature.log
+-rw-rw-r-- 1 elsaidy-electric elsaidy-electric   183 سبت  4 00:14 tempretur.log
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home/elsaidy-electric/iot_logger/logs   main  cd  
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  crontab -e
+crontab: installing new crontab
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  crontab -e
+crontab: installing new crontab
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  cd home 
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home  cd elsaidy-electric/iot_logger/logs 
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home/elsaidy-electric/iot_logger/logs   main  ls -lh temperature.log
+-rwxrw---- 2 elsaidy-electric iot_team 15K سبت  4 00:14 temperature.log
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home/elsaidy-electric/iot_logger/logs   main  tail -f
+
+
+^C
+ ✘ elsaidy-electric@elsaidyelectric-VirtualBox  ~/home/elsaidy-electric/iot_logger/logs   main  cd
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  tail -f ~/home/elsaidy-electric/iot_logger/logs/temperature.log
+My sensor type is distance , the distance equal 267 and the time now is 2025-09-04 00:14:16 
+My sensor type is distance , the distance equal 145 and the time now is 2025-09-04 00:14:19 
+My sensor type is distance , the distance equal 325 and the time now is 2025-09-04 00:14:22 
+My sensor type is distance , the distance equal 106 and the time now is 2025-09-04 00:14:25 
+My sensor type is distance , the distance equal 107 and the time now is 2025-09-04 00:14:28 
+My sensor type is distance , the distance equal 108 and the time now is 2025-09-04 00:14:32 
+My sensor type is distance , the distance equal 133 and the time now is 2025-09-04 00:14:35 
+My sensor type is distance , the distance equal 137 and the time now is 2025-09-04 00:14:38 
+My sensor type is distance , the distance equal 129 and the time now is 2025-09-04 00:14:41 
+My sensor type is distance , the distance equal 236 and the time now is 2025-09-04 00:14:44 
+^C                  
+ ✘ elsaidy-electric@elsaidyelectric-VirtualBox  ~  tar -czvf ~/home/elsaidy-electric/iot_logger/data/logs_archive.tar.gz ~/home/elsaidy-electric/iot_logger/logs/*.logs*
+zsh: no matches found: /home/elsaidy-electric/home/elsaidy-electric/iot_logger/logs/*.logs*
+ ✘ elsaidy-electric@elsaidyelectric-VirtualBox  ~  tar -czvf ~/home/elsaidy-electric/iot_logger/data/logs_archive.tar.gz ~/home/elsaidy-electric/iot_logger/logs/*.logs 
+zsh: no matches found: /home/elsaidy-electric/home/elsaidy-electric/iot_logger/logs/*.logs
+ ✘ elsaidy-electric@elsaidyelectric-VirtualBox  ~  tar -czvf ~/home/elsaidy-electric/iot_logger/data/logs_archive.tar.gz ~/home/elsaidy-electric/iot_logger/logs/*.log* 
+tar: Removing leading `/' from member names
+/home/elsaidy-electric/home/elsaidy-electric/iot_logger/logs/temperature.log
+tar: Removing leading `/' from hard link targets
+/home/elsaidy-electric/home/elsaidy-electric/iot_logger/logs/tempretur.log
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  $
+zsh: command not found: $
+ ✘ elsaidy-electric@elsaidyelectric-VirtualBox  ~  mkdir ~/home 
+mkdir: cannot create directory ‘/home/elsaidy-electric/home’: File exists
+ ✘ elsaidy-electric@elsaidyelectric-VirtualBox  ~  m
+m2300w                            mkfs.ext3                       
+m2300w-wrapper                    mkfs.ext4                       
+m2400w                            mkfs.fat                        
+MACHTYPE                          mkfs.minix                      
+MAILCHECK                         mkfs.msdos                      
+mailpath                          mkfs.ntfs                       
+MAILPATH                          mkfs.vfat                       
+make                              mkhomedir_helper                
+make-first-existing-target        mkinitramfs                     
+make-ssl-cert                     mkisofs                         
+mako-render                       mklost+found                    
+man                               mk_modmap                       
+mandb                             mknod                           
+manpath                           mkntfs                          
+MANPATH                           mksquashfs                      
+man-recode                        mkswap                          
+mapscrn                           mktemp                          
+mawk                              mkzftree                        
+mcookie                           mmcli                           
+md                                ModemManager                    
+md5sum                            modinfo                         
+md5sum.textutils                  modprobe                        
+mdig                              module_path                     
+memusage                          MODULE_PATH                     
+memusagestat                      mokutil                         
+MENUSELECT                        monitor-sensor                  
+mesa-overlay-control.py           more                            
+mesg                              mount                           
+migrate-pubring-from-classic-gpg  mount.fuse                      
+mii-tool                          mount.fuse3                     
+mimeopen                          mount.lowntfs-3g                
+mimetype                          mount.ntfs                      
+min12xxw                          mount.ntfs-3g                   
+mkcd                              mountpoint                      
+mkdir                             mousetweaks                     
+mkdosfs                           mscompress                      
+mke2fs                            msexpand                        
+mkfifo                            mt                              
+mkfontdir                         mt-gnu                          
+mkfontscale                       mtr                             
+mkfs                              mtrace                          
+mkfs.bfs                          mtr-packet                      
+mkfs.cramfs                       Music/                          
+mkfs.ext2                         mv                              
+ ✘ elsaidy-electric@elsaidyelectric-VirtualBox  ~  mkdir -p ~/home/elsaidy-electric/iot_logger/server
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  cp ~/home/elsaidy-electric/iot_logger/data/logs_archive.tar.gz 
+cp: missing destination file operand after '/home/elsaidy-electric/home/elsaidy-electric/iot_logger/data/logs_archive.tar.gz'
+Try 'cp --help' for more information.
+ ✘ elsaidy-electric@elsaidyelectric-VirtualBox  ~  cp ~/home/elsaidy-electric/iot_logger/data/logs_archive.tar.gz ~/home/elsaidy-electric/iot_logger/server/
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  ls -l  ~/home/elsaidy-electric/iot_logger/data/logs_archive.tar.gz
+-rw-rw-r-- 1 elsaidy-electric elsaidy-electric 1392 سبت  5 00:11 /home/elsaidy-electric/home/elsaidy-electric/iot_logger/data/logs_archive.tar.gz
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  cp ~/home/elsaidy-electric/iot_logger/data/logs_archive.tar.gz ~/home/elsaidy-electric/iot_logger/server/
+ elsaidy-electric@elsaidyelectric-VirtualBox  ~  scp ~/home/elsaidy-electric/iot_logger/data/logs_archive.tar.gz username@remote_host:/path/to/destination
+ssh: Could not resolve hostname remote_host: Temporary failure in name resolution
+lost connection
+ ✘ elsaidy-electric@elsaidyelectric-VirtualBox  ~ 
